@@ -26,13 +26,29 @@ The study compares traditional machine learning approaches based on TF-IDF featu
 * First ICU stay per patient
 * Clinical notes recorded within the first 24 hours of ICU admission
 
-### Processed Datasets Included
+### Main MIMIC-III Tables Used
+
+* ADMISSIONS
+* PATIENTS
+* ICUSTAYS
+* DIAGNOSES_ICD
+* NOTEEVENTS
+
+### Processed Datasets
+
+The preprocessing pipeline generates the following datasets:
 
 * `sepsis_cohort.csv` – Final patient cohort after cohort construction and sepsis labeling.
 * `first24h_notes.csv` – Clinical notes extracted from the first 24 hours of ICU admission.
 * `clean_notes.csv` – Preprocessed clinical notes used for machine learning and NLP modeling.
 
-> Note: The original MIMIC-III database files are not included in this repository. Researchers interested in reproducing this work must obtain credentialed access through PhysioNet.
+Due to dataset size constraints and licensing considerations, the processed datasets are not stored in this repository. They can be reproduced by running the preprocessing notebooks provided in the `notebooks/` directory.
+
+### Data Access
+
+The original MIMIC-III database files are not included in this repository. Researchers interested in reproducing this work must obtain credentialed access through PhysioNet:
+
+https://physionet.org/content/mimiciii/1.4/
 
 ## Project Workflow
 
@@ -43,13 +59,15 @@ Data Inspection → Cohort Creation → Note Extraction → Text Preprocessing �
 ```text
 Early-Sepsis-Risk-Prediction-NLP/
 │
-├── data/
-│   └── processed/
-│       ├── sepsis_cohort.csv
-│       ├── first24h_notes.csv
-│       └── clean_notes.csv
-│
 ├── notebooks/
+│   ├── 01_Data_Inspection.ipynb
+│   ├── 02_Cohort_Creation.ipynb
+│   ├── 03_Note_Extraction.ipynb
+│   ├── 04_Text_Preprocessing.ipynb
+│   ├── 05_Baseline_TFIDF_Models.ipynb
+│   ├── 06_ClinicalBERT_Model.ipynb
+│   ├── 07_Model_Evaluation.ipynb
+│   └── 08_Explainability.ipynb
 │
 ├── outputs/
 │
@@ -66,6 +84,7 @@ Early-Sepsis-Risk-Prediction-NLP/
 
 * Python
 * Pandas
+* NumPy
 * Scikit-learn
 * XGBoost
 * PyTorch
