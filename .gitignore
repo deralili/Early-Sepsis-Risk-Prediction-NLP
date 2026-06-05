@@ -1,0 +1,29 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Raw MIMIC-III data
+data/raw/
+
+# Large compressed files
+*.zip
+*.gz
+
+# Model checkpoints
+checkpoints/
+clinicalbert_model/
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
