@@ -53,9 +53,9 @@ reports/
 
 ## Author
 
-Amadike Chidera Lilian
-Master of Data Science and Analytics
-Toronto Metropolitan University
+- Amadike Chidera Lilian
+- Master of Data Science and Analytics
+- Toronto Metropolitan University
 
 ```
 ```
