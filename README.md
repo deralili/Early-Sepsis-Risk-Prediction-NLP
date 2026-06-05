@@ -26,6 +26,14 @@ The study compares traditional machine learning approaches based on TF-IDF featu
 * First ICU stay per patient
 * Clinical notes recorded within the first 24 hours of ICU admission
 
+### Processed Datasets Included
+
+* `sepsis_cohort.csv` – Final patient cohort after cohort construction and sepsis labeling.
+* `first24h_notes.csv` – Clinical notes extracted from the first 24 hours of ICU admission.
+* `clean_notes.csv` – Preprocessed clinical notes used for machine learning and NLP modeling.
+
+> Note: The original MIMIC-III database files are not included in this repository. Researchers interested in reproducing this work must obtain credentialed access through PhysioNet.
+
 ## Project Workflow
 
 Data Inspection → Cohort Creation → Note Extraction → Text Preprocessing → TF-IDF Models → ClinicalBERT → Model Evaluation → Explainability
@@ -33,11 +41,25 @@ Data Inspection → Cohort Creation → Note Extraction → Text Preprocessing �
 ## Repository Structure
 
 ```text
-notebooks/
-data/
-outputs/
-models/
-reports/
+Early-Sepsis-Risk-Prediction-NLP/
+│
+├── data/
+│   └── processed/
+│       ├── sepsis_cohort.csv
+│       ├── first24h_notes.csv
+│       └── clean_notes.csv
+│
+├── notebooks/
+│
+├── outputs/
+│
+├── models/
+│
+├── reports/
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ## Technologies
@@ -53,10 +75,6 @@ reports/
 
 ## Author
 
-- Amadike Chidera Lilian
-- Master of Data Science and Analytics
-- Toronto Metropolitan University
-
-```
-```
-
+* Amadike Chidera Lilian
+* Master of Data Science and Analytics
+* Toronto Metropolitan University
