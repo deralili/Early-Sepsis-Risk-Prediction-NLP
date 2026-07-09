@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1,ROC_AUC
+Logistic Regression,0.8701,0.4522,0.7862,0.5742,0.9169
+XGBoost,0.9247,0.7684,0.4638,0.5785,0.91
+ClinicalBERT (Experiment 1),0.8932,0.5217,0.4934,0.5072,0.8592
+ClinicalBERT (Experiment 2),0.8788,0.4608,0.5214,0.4892,0.8414
+ClinicalBERT (Experiment 3),0.8154,0.3382,0.6875,0.4534,0.8217
